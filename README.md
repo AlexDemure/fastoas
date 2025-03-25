@@ -79,7 +79,7 @@ app = FastAPI()
 app.openapi = OpenAPI(app, handlers=[use_route_as_operation_id])
 
 
-class User(Deprecated):
+class User(BaseModel):
     id: int
 
 
