@@ -20,7 +20,7 @@ pip install fastoas
 ```
 from fastoas import OpenAPI
 
-app.openapi = Fastoas(app)
+app.openapi = OpenAPI(app)
 ```
 
 ### Extension ```fastoas.extensions.affix```
