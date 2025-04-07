@@ -1,4 +1,4 @@
-from fastoas import const
+from gadopenapi import const
 
 
 def findrefs(openapi: dict, find: str, replace: str) -> None:

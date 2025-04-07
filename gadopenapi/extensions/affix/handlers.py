@@ -1,8 +1,8 @@
 import contextlib
 from typing import Any
 
-from fastoas import const
-from fastoas.utils import specification
+from gadopenapi import const
+from gadopenapi.utils import specification
 
 
 def affix(app: Any, openapi: dict, attr: str = "__affix__") -> tuple[Any, dict]:

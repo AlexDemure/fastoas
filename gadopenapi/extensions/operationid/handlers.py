@@ -1,6 +1,6 @@
 from typing import Any
 
-from fastoas import const
+from gadopenapi import const
 
 
 def use_route_as_operation_id(app: Any, openapi: dict, exclude: tuple[str] = ()) -> tuple[Any, dict]:

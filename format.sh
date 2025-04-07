@@ -1,3 +1,3 @@
-isort fastoas/
-ruff format fastoas/ --no-cache
+isort gadopenapi/
+ruff format gadopenapi/ --no-cache
 

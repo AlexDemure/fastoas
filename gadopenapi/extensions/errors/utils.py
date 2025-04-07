@@ -1,4 +1,4 @@
-from fastoas import const
+from gadopenapi import const
 
 
 def openapi_errors(*args) -> dict:

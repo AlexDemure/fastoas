@@ -4,7 +4,7 @@ with open("requirements.txt") as f:
     requirements = f.read().splitlines()
 
 setup(
-    name="fastoas",
+    name="gadopenapi",
     version="0.0.1",
     packages=find_packages(),
     install_requires=requirements,
@@ -14,7 +14,7 @@ setup(
     description="Customize and override OpenAPI schema details in FastAPI with ease",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/AlexDemure/fastoas",
+    url="https://github.com/AlexDemure/gadopenapi",
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",

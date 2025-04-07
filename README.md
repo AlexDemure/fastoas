@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://github.com/AlexDemure/fastoas">
-    <a href="https://ibb.co/SwwDyCsJ"><img src="https://i.ibb.co/jkk9fX6H/Frame-1349-2.png" alt="Frame-1349-2" border="0"></a>
+  <a href="https://github.com/AlexDemure/gadopenapi">
+    <a href="https://ibb.co/6cqwTKh6"><img src="https://i.ibb.co/zWtxB3cK/logo.png" alt="logo" border="0"></a>
   </a>
 </p>
 
@@ -13,24 +13,24 @@
 ## Installation
 
 ```
-pip install fastoas
+pip install gadopenapi
 ```
 
 ## Usage
 ```
-from fastoas import OpenAPI
+from gadopenapi import OpenAPI
 
 app.openapi = OpenAPI(app)
 ```
 
-### Extension ```fastoas.extensions.affix```
+### Extension ```gadopenapi.extensions.affix```
 
 ```
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-from fastoas import OpenAPI
-from fastoas.extensions.affix import affix
+from gadopenapi import OpenAPI
+from gadopenapi.extensions.affix import affix
 
 app = FastAPI()
 
@@ -65,14 +65,14 @@ openapi.json
 }
 ```
 
-### Extension ```fastoas.extensions.operationid```
+### Extension ```gadopenapi.extensions.operationid```
 
 ```
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-from fastoas import OpenAPI
-from fastoas.extensions.operationid import use_route_as_operation_id
+from gadopenapi import OpenAPI
+from gadopenapi.extensions.operationid import use_route_as_operation_id
 
 app = FastAPI()
 
@@ -111,11 +111,11 @@ openapi.json
 }
 ```
 
-### Extension ```fastoas.extensions.errors``` 
+### Extension ```gadopenapi.extensions.errors``` 
 
 ```
 from fastapi import FastAPI
-from fastoas.extensions.errors import APIError, openapi_errors
+from gadopenapi.extensions.errors import APIError, openapi_errors
 
 app = FastAPI()
 
@@ -163,7 +163,7 @@ openapi.json
 
 ```
 from fastapi import FastAPI
-from fastoas import OpenAPI
+from gadopenapi import OpenAPI
 
 def my_handler(app: FastAPI, openapi: dict) -> tuple[FastAPI, dict]:
     # Mutate openapi here
