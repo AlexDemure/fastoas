@@ -21,6 +21,12 @@ pip install gadopenapi
 from gadopenapi import OpenAPI
 
 app.openapi = OpenAPI(app)
+
+# or
+
+@app.get("/api/openapi.json", include_in_schema=False)
+async def openapi():
+    return OpenAPI(app, handlers=[affix, use_route_as_operation_id]).generate()
 ```
 
 ### Extension ```gadopenapi.extensions.affix```
