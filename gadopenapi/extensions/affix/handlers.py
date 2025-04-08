@@ -34,8 +34,9 @@ def affix(app: Any, openapi: dict, attr: str = "__affix__") -> tuple[Any, dict]:
         schema[const.SPECIFICATION_COMPONENTS_SCHEMAS_TITLE] = name
         schemas[name] = schema
 
-        with contextlib.suppress(KeyError):
-            del schemas[model.__name__]
+        if name != model.__name__:
+            with contextlib.suppress(KeyError):
+                del schemas[model.__name__]
 
         specification.findrefs(openapi, model.__name__, name)
 
