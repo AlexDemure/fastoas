@@ -1,7 +1,9 @@
+import typing
+
 from gadopenapi import const
 
 
-def findrefs(openapi: dict, find: str, replace: str) -> None:
+def findrefs(openapi: typing.Dict, find: str, replace: str) -> None:
     if isinstance(openapi, dict):
         for key, value in openapi.items():
             if (

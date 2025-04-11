@@ -1,10 +1,9 @@
+import typing
 from collections.abc import Sequence
-from typing import Any
-from typing import Callable
 
 
 class OpenAPI:
-    def __init__(self, app: Any, handlers: Sequence[Callable] = ()) -> None:
+    def __init__(self, app: typing.Any, handlers: Sequence[typing.Callable] = ()) -> None:
         self.app = app
         self.handlers = handlers
 

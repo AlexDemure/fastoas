@@ -1,9 +1,11 @@
-from typing import Any
+import typing
 
 from gadopenapi import const
 
 
-def use_route_as_operation_id(app: Any, openapi: dict, exclude: tuple[str] = ()) -> tuple[Any, dict]:
+def use_route_as_operation_id(
+    app: typing.Any, openapi: typing.Dict, exclude: typing.Tuple[str] = ()
+) -> typing.Tuple[typing.Any, typing.Dict]:
     if not (routes := getattr(app, const.SPECIFICATION_ROUTES, [])):
         return app, openapi
 

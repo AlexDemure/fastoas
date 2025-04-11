@@ -1,11 +1,11 @@
 import contextlib
-from typing import Any
+import typing
 
 from gadopenapi import const
 from gadopenapi.utils import specification
 
 
-def affix(app: Any, openapi: dict, attr: str = "__affix__") -> tuple[Any, dict]:
+def affix(app: typing.Any, openapi: typing.Dict, attr: str = "__affix__") -> typing.Tuple[typing.Any, typing.Dict]:
     if not (schemas := openapi.get(const.SPECIFICATION_COMPONENTS, {}).get(const.SPECIFICATION_COMPONENTS_SCHEMAS, {})):
         return app, openapi
 

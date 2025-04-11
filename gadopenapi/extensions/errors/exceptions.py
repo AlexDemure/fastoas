@@ -1,8 +1,8 @@
-from http import HTTPStatus
+import http
 
 
 class APIError(Exception):
-    status_code: int = HTTPStatus.IM_A_TEAPOT
+    status_code: int = http.HTTPStatus.IM_A_TEAPOT
 
     def to_dict(self) -> dict:
         return dict(
