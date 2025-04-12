@@ -4,8 +4,8 @@ with open("requirements.txt") as f:
     requirements = f.read().splitlines()
 
 setup(
-    name="gadopenapi",
-    version="0.0.3",
+    name="gadfastopenapi",
+    version="0.0.1",
     packages=find_packages(),
     install_requires=requirements,
     entry_points={},
@@ -14,7 +14,7 @@ setup(
     description="Customize and override OpenAPI schema details in FastAPI with ease",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/AlexDemure/gadopenapi",
+    url="https://github.com/AlexDemure/gadfastopenapi",
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",

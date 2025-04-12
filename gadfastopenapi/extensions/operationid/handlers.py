@@ -1,6 +1,6 @@
 import typing
 
-from gadopenapi import const
+from gadfastopenapi import const
 
 
 def use_route_as_operation_id(

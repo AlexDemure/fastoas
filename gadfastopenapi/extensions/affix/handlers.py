@@ -1,8 +1,8 @@
 import contextlib
 import typing
 
-from gadopenapi import const
-from gadopenapi.utils import specification
+from gadfastopenapi import const
+from gadfastopenapi.utils import specification
 
 
 def affix(app: typing.Any, openapi: typing.Dict, attr: str = "__affix__") -> typing.Tuple[typing.Any, typing.Dict]:

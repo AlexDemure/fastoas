@@ -1,3 +1,3 @@
-isort gadopenapi/
-ruff format gadopenapi/ --no-cache
+isort gadfastopenapi/
+ruff format gadfastopenapi/ --no-cache
 

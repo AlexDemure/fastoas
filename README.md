@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://github.com/AlexDemure/gadopenapi">
-    <a href="https://ibb.co/6cqwTKh6"><img src="https://i.ibb.co/zWtxB3cK/logo.png" alt="logo" border="0"></a>
+  <a href="https://github.com/AlexDemure/gadfastopenapi">
+    <a href="https://ibb.co/DHJ0GXWW"><img src="https://i.ibb.co/KpPTNZhh/logo.png" alt="logo" border="0"></a>
   </a>
 </p>
 
@@ -10,15 +10,15 @@
 
 ---
 
-## Installation
+### Installation
 
 ```
-pip install gadopenapi
+pip install gadfastopenapi
 ```
 
-## Usage
+### Usage
 ```
-from gadopenapi import OpenAPI
+from gadfastopenapi import OpenAPI
 
 app.openapi = OpenAPI(app)
 
@@ -29,14 +29,14 @@ async def openapi():
     return OpenAPI(app, handlers=[affix, use_route_as_operation_id]).generate()
 ```
 
-### Extension ```gadopenapi.extensions.affix```
+### Extension ```gadfastopenapi.extensions.affix```
 
 ```
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-from gadopenapi import OpenAPI
-from gadopenapi.extensions.affix import affix
+from gadfastopenapi import OpenAPI
+from gadfastopenapi.extensions.affix import affix
 
 app = FastAPI()
 
@@ -71,14 +71,14 @@ openapi.json
 }
 ```
 
-### Extension ```gadopenapi.extensions.operationid```
+### Extension ```gadfastopenapi.extensions.operationid```
 
 ```
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-from gadopenapi import OpenAPI
-from gadopenapi.extensions.operationid import use_route_as_operation_id
+from gadfastopenapi import OpenAPI
+from gadfastopenapi.extensions.operationid import use_route_as_operation_id
 
 app = FastAPI()
 
@@ -117,11 +117,11 @@ openapi.json
 }
 ```
 
-### Extension ```gadopenapi.extensions.errors``` 
+### Extension ```gadfastopenapi.extensions.errors``` 
 
 ```
 from fastapi import FastAPI
-from gadopenapi.extensions.errors import APIError, openapi_errors
+from gadfastopenapi.extensions.errors import APIError, openapi_errors
 
 app = FastAPI()
 
@@ -169,7 +169,7 @@ openapi.json
 
 ```
 from fastapi import FastAPI
-from gadopenapi import OpenAPI
+from gadfastopenapi import OpenAPI
 
 def my_handler(app: FastAPI, openapi: dict) -> tuple[FastAPI, dict]:
     # Mutate openapi here

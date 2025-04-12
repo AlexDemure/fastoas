@@ -1,10 +1,10 @@
 import typing
 
-from gadopenapi import const
+from gadfastopenapi import const
 
 
-def findrefs(openapi: typing.Dict, find: str, replace: str) -> None:
-    if isinstance(openapi, dict):
+def findrefs(openapi: typing.Union[typing.Dict, typing.List], find: str, replace: str) -> None:
+    if isinstance(openapi, typing.Dict):
         for key, value in openapi.items():
             if (
                 key == const.SPECIFICATION_COMPONENTS_SCHEMAS_REF_KEY
@@ -13,7 +13,7 @@ def findrefs(openapi: typing.Dict, find: str, replace: str) -> None:
                 openapi[key] = f"{const.SPECIFICATION_COMPONENTS_SCHEMAS_REF_PATH}{replace}"
             else:
                 findrefs(value, find, replace)
-    elif isinstance(openapi, list):
+    elif isinstance(openapi, typing.List):
         for item in openapi:
             findrefs(item, find, replace)
 

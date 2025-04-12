@@ -1,4 +1,4 @@
-from gadopenapi import const
+from gadfastopenapi import const
 
 
 def openapi_errors(*args) -> dict:
